@@ -1,38 +1,70 @@
-.App {
+
+/* header{
+  background-image: url('../src/Images/build2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+} */
+.Carousel{
+filter: brightness(70%);
+}
+.center{
+  margin: 1em auto;
+  padding: 1em;
+  
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+   min-height: 80vh; 
+  
+}
+
+
+
+input{
+  width: 100%;
+  margin: 0.6em 0.6em;
+  padding: 10px 17px;
+  
+  font-size: 1.1em;
+  
+  
+}
+
+label{
+  padding: 6px;
   color: white;
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.formz {
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  margin:  auto;
+  background-color: rgb(146, 152, 152);
+  padding: 1em 2em;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.wal{
+ background-image: url('../src/Images/build2.jpg');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ padding: 4em;
+ min-height: 100vh;
 }
+
+
+
+/* .btn button:hover {
+  background: #066e37;
+  text-decoration: none;
+} */
