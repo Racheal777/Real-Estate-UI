@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Slides from './Slides'
 import Navbarx from './Nav'
+import About from './about'
 
 export default function Main() {
   return (
@@ -10,10 +10,19 @@ export default function Main() {
    <Navbarx/>     
 
     <header>
-    
-        {/* <h2>Find Your Perfect Dream House</h2> */}
-        <Slides/>
+      <div className='justify-center m-auto'>
+      <h2 className='text-white flex justify-center  font-sans font-bold'>FIND YOUR BEST PROPERTY</h2>
+      <form className='w-1/2 m-auto' >
+        <input type="text" placeholder='Enter Location'/>
+        </form> 
+      </div>
+     
     </header>
+
+    <section>
+      <About/>
+    </section>
+
     </div>
   )
 }

@@ -1,12 +1,12 @@
 
-/* header{
-  background-image: url('../src/Images/build2.jpg');
+header{
+  background-image: url('../src/Images/pic.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 60vh;
-} */
+}
 .Carousel{
 filter: brightness(70%);
 }
