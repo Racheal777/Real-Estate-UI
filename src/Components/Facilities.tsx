@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react'
 
-export default function About() {
+export default function Facilities() {
   return (
-    <div className="container mx-auto font-sans">
-      <section className="m-0">
-        <div className="mt-12 pt-5 pb-5 text-center">
-          <h2 className="font-bold">Why we are the best</h2>
-          <h4 className="text-slate-400">The best to ever do it</h4>
-        </div>
+    <div>
+         <section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 m-2 p-4 gap-x-10 gap-y-12">
-          <div className="bg-slate-100 hover:-translate-y-1 hover:scale-110  duration-300 hover:shadow-2xl hover:bg-orange-900 hover:text-white p-4">
+             <div className='mt-12 pt-5 pb-5 text-center'>
+                 <h2 className='font-bold'>Our Special Facilities</h2>
+             </div>
+             <section className='subscribe'>
+
+             <div className="grid grid-cols-1 md:grid-cols-3 p-8  ">
+          <div className="bg-slate-100 hover:-translate-y-1 hover:scale-110  duration-300 hover:shadow-2xl hover:bg-slate-200 hover:text-slate-900 p-3 m-8">
             <div className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +28,7 @@ export default function About() {
                 />
               </svg>
 
-              <h4>Expect Agents</h4>
+              <h4>Swimming Pool</h4>
             </div>
 
             <p className="text-slate-400">
@@ -36,7 +37,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-slate-100 hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-orange-900 hover:text-white p-4">
+          <div className="bg-slate-100 hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-slate-200 hover:text-slate-900 p-3  m-8">
             <div className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +54,7 @@ export default function About() {
                 />
               </svg>
 
-              <h4>Expect Agents</h4>
+              <h4>Conference Room</h4>
             </div>
 
             <p className="text-slate-400">
@@ -62,7 +63,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-slate-100  hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-orange-900 hover:text-white p-4">
+          <div className="bg-slate-100  hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-slate-200 hover:text-slate-900 p-3  m-8">
             <div className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,19 +80,17 @@ export default function About() {
                 />
               </svg>
 
-              <h4>Expect Agents</h4>
+              <h4>Arena</h4>
             </div>
 
             <p className="text-slate-400">
               Lorem ipsum, dolor sit amet consecte officia est molestiae dolor fugiat repellat libero repudiandae to?
             </p>
           </div>
-
-          
-
           
         </div>
-      </section>
+        </section>
+         </section>
     </div>
-  );
+  )
 }

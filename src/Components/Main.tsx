@@ -1,28 +1,51 @@
-import React from 'react'
+import React from "react";
 
-import Navbarx from './Nav'
-import About from './about'
+import Navbarx from "./Nav";
+import About from "./about";
+import Properties from "./Properties";
+import Subscribe from "./Subscribe";
+import Footer from "./Footer";
+import Testimonials from "./Testimonials";
+import Header from "./Header";
+import Numbers from "./Numbers";
+import Facilities from "./Facilities";
 
 export default function Main() {
   return (
-    <div className='md:container md:mx-auto'>
+    <div className="md:container md:mx-auto">
+      <Navbarx />
 
-   <Navbarx/>     
+      <Header />
+      <section>
+        <About />
+      </section>
 
-    <header>
-      <div className='justify-center m-auto'>
-      <h2 className='text-white flex justify-center  font-sans font-bold'>FIND YOUR BEST PROPERTY</h2>
-      <form className='w-1/2 m-auto' >
-        <input type="text" placeholder='Enter Location'/>
-        </form> 
-      </div>
-     
-    </header>
+      <section>
+        <Properties />
+      </section>
+
+      
 
     <section>
-      <About/>
+      <Facilities/>
     </section>
 
+      <section>
+        <Numbers />
+      </section>
+      
+      <section>
+        <Testimonials />
+      </section>
+
+      <section>
+        <Subscribe />
+      </section>
+
+      <footer>
+        <Footer />
+      </footer>
+
     </div>
-  )
+  );
 }

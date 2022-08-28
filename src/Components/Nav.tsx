@@ -6,20 +6,36 @@ import 'bootswatch/dist/flatly/bootstrap.min.css';
 
 function Navbarx() {
   return (
-    <Navbar expand="lg" className='navbar-dark bg-primary'>
-      <Container>
-        <Navbar.Brand href="#home">Rentax</Navbar.Brand>
+    <Navbar expand="lg" className='navbar-dark bg-primary fixed'>
+      <Container >
+        
+        <div>
+        <Navbar.Brand href="/">Rentax</Navbar.Brand>
+        </div>
+       
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+
+            <div className='flex'>
             <Nav.Link href="/">Home</Nav.Link>
+           
+           <Nav.Link href="/">About</Nav.Link>
+           <Nav.Link href="/allproperties">Properties</Nav.Link>
+           <Nav.Link href="/signup">Contact</Nav.Link>
+            </div>
+            
+
+            <div className='flex '>
             <Nav.Link href="/signup">Signup</Nav.Link>
-            <Nav.Link href="/">About</Nav.Link>
-            <Nav.Link href="/login">Link</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
+            </div>
+            
             
                
           </Nav>
         </Navbar.Collapse>
+       
       </Container>
     </Navbar>
   );

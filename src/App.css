@@ -1,6 +1,7 @@
 
 header{
-  background-image: url('../src/Images/pic.jpg');
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), 
+  rgba(0, 0, 0, 0.5)), url('../src/Images/pic3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +24,7 @@ filter: brightness(70%);
 
 
 
-input{
+input, select, textarea{
   width: 100%;
   margin: 0.6em 0.6em;
   padding: 10px 17px;
@@ -51,7 +52,17 @@ label{
 
 }
 
+.subscribe{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), 
+  rgba(0, 0, 0, 0.2)),url('../src/Images/pic6.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  background-attachment: fixed;
+  width: 100%;
+  
+}
 
 .wal{
  background-image: url('../src/Images/build2.jpg');
