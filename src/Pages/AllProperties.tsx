@@ -19,30 +19,30 @@ export default function AllProperties() {
 
       <header>
         <div className="justify-center m-auto pt-20">
-          <h2 className="text-white flex justify-center text-6xl p-2 m-8 font-sans font-bold">
+          <h2 className="text-white flex justify-center text-center md:text-6xl p-2 m-8 font-sans font-bold">
             FIND YOUR BEST PROPERTY
           </h2>
-          <p className="text-white justify-center text-center">
+          <p className="text-white justify-center text-center px-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
             quaerat distin
           </p>
         </div>
       </header>
 
-      <section className="m-4 p-3  text-center">
-        <div className="mt-6 pt-5 pb-5 font-bold">
+      <section className="mx-auto p-4  text-center">
+        <div className="mt-3 pt-3 pb-5 font-bold">
           <h2>All Listings</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center m-2 p-2">
-          <div className="p-2 mx-2 bg-slate-900">
-            <form action="" className="p-2">
-              <h3>Filter Here</h3>
-              <div>
-                <input type="text" name="" id="" placeholder="search" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-2 p-2">
+          <div className=" md:mx-2 pb-2 mx-2 bg-slate-900">
+            <form action="" className="md:p-2 p-4 m-auto">
+              <h3 className="text-white">Filter Here</h3>
+              <div className="m-2 pb-2">
+                <input type="text" name="" id="" placeholder="search" className="" />
               </div>
 
-              <div className="pt-2">
+              <div className="m-2">
                 <select name="beds" id="" placeholder="select" className="p-2">
                   <option value="1" >1 bedroom</option>
                   <option value="2">2 bedroom</option>
@@ -50,8 +50,8 @@ export default function AllProperties() {
                 </select>
               </div>
 
-              <div className="pt-2">
-                <select name="price" id="" placeholder="select" className="p-4">
+              <div className="pt-2 m-2">
+                <select name="price" id="" placeholder="select" className="">
                   <option value="200">200ghc</option>
                   <option value="300">300ghc</option>
                   <option value="400">400ghc</option>
@@ -68,10 +68,10 @@ export default function AllProperties() {
           </div>
 
           <>
-            <section className="col-span-2 mx-6 hover:shadow-2xl hover:-translate  duration-300  ">
+          <section className="col-span-2 mx-6 hover:shadow-2xl hover:-translate  duration-300  ">
               <div className="bg-slate-200 grid grid-cols-1 md:grid-cols-2">
                 <div className=" hover:bg-slate-900 hover:text-white">
-                  <img src={imgs} alt="pic" />
+                  <img src={img2} alt="pic" />
 
                   <div className="flex justify-center p-2">
                     <div>

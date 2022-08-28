@@ -18,9 +18,15 @@ function Navbarx() {
                 Rent
               </span>
             </a>
+            <Navbar.Toggle
+              data-collapse-toggle="navbar-sticky"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            />
 
+            <Navbar.Collapse>
             
-            <div className="flex md:order-2">
+            <div className="flex md:order-2 p-3">
               <Dropdown
                 arrowIcon={false}
                 inline={true}
@@ -47,17 +53,11 @@ function Navbarx() {
             </div>
 
 
-            <Navbar.Toggle
-              data-collapse-toggle="navbar-sticky"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            />
-
-            <Navbar.Collapse>
-              <Navbar.Link href="/" active={true}>
+            
+              <Navbar.Link  href="/" active={true}>
                 Home
               </Navbar.Link>
-              <Navbar.Link href="/">About</Navbar.Link>
+              <Navbar.Link  href="/">About</Navbar.Link>
               <Navbar.Link href="/">Services</Navbar.Link>
               <Navbar.Link href="/allapartments">Apartments</Navbar.Link>
               <Navbar.Link href="/">Contact</Navbar.Link>

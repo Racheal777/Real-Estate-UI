@@ -10,7 +10,7 @@ export default function Properties() {
       <section className="mt-6 pt-4 pb-5  ">
         <h2 className="text-center p-4">Popular Properties</h2>
 
-        <div className="grid md:grid-cols-3 m-2 p-4 gap-x-10 gap-y-12">
+        <div className="grid md:grid-cols-3 mx-6 md:m-2 p-4 gap-x-10 gap-y-12">
 
           <div className="shadow hover:-translate-y-1 hover:scale-110  duration-300 rounded-md">
            
