@@ -9,12 +9,24 @@ import Testimonials from "./Testimonials";
 import Header from "./Header";
 import Numbers from "./Numbers";
 import Facilities from "./Facilities";
+import Navz from "./Navz";
 
 export default function Main() {
   return (
     <div className="md:container md:mx-auto">
-      <Navbarx />
+      {/* <Navbarx /> */}
+      <Navz/>
 
+{/* <div>ygyugluglgu;bybybl;ubbbb
+  <br />
+  nu;un;iylbg
+  <br />
+  uuiiugug
+  <br />
+  uhuh
+  <br />
+  bnujbujbn
+</div> */}
       <Header />
       <section>
         <About />
@@ -33,7 +45,7 @@ export default function Main() {
       <section>
         <Numbers />
       </section>
-      
+
       <section>
         <Testimonials />
       </section>

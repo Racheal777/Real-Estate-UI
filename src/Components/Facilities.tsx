@@ -10,7 +10,7 @@ export default function Facilities() {
              </div>
              <section className='subscribe'>
 
-             <div className="grid grid-cols-1 md:grid-cols-3 p-8  ">
+             <div className="grid grid-cols-1 md:grid-cols-3 py-12 mx-auto px-3  ">
           <div className="bg-slate-100 hover:-translate-y-1 hover:scale-110  duration-300 hover:shadow-2xl hover:bg-slate-200 hover:text-slate-900 p-3 m-8">
             <div className="flex">
               <svg

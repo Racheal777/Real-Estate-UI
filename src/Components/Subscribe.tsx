@@ -6,17 +6,19 @@ export default function Subscribe() {
     <div>
         <section className="subscribe">
         <section className="backdrop-blur-sm bg-white/30">
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4 text-center">
-                <h4 className="col-span-2 p-4 m-4  font-bold text-slate-900">Do you want to talk with one of <span className="text-orange-600 ">our real estate experts?</span></h4>
-                <button type="submit" className="bg-orange-600 text-white m-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-4 text-center ">
+                <h4 className="col-span-2 md:p-4 md:m-4  font-bold text-slate-900">Do you want to talk with one of <span className="text-orange-600 ">our real estate experts?</span></h4>
+                <button type="submit" className="bg-orange-600 text-white p-2 m-6 ">
                 Call now: +233 5428 0959
               </button>
             </div>
         </section>
+
+
         </section>
       <section className=" bg-slate-900  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-stretch content-center   p-5">
-          <div className="m-3 pt-5 justify-self-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-stretch content-center mx-auto p-5">
+          <div className="m-auto pt-2 justify-self-center col-span-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -36,16 +38,18 @@ export default function Subscribe() {
             </h3>
             <p className="text-slate-500">Get the latest offers</p>
 
-            <div className="flex">
+            <div className="flex py-2">
               <input type="email" name="email" id="" placeholder="Your email" />
-              <button type="submit" className="bg-orange-600 text-white  px-4">
+              <button type="submit" className="bg-orange-600 text-white   px-4">
                 Submit
               </button>
             </div>
           </div>
 
-          <div className=" justify-self-center mx-8 ">
-            <img src={img2} alt="pic" className="m-8 " />
+          <div className=" justify-self-center py-2 ">
+              
+              <img src={img2} alt="pic" className="" />
+            
             <div></div>
           </div>
         </div>

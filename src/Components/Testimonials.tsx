@@ -4,6 +4,7 @@ export default function Testimonials() {
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center pt-4">Client Testimonials</h2>
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="max-w-screen-md mx-auto">
             <svg

@@ -2,11 +2,19 @@ import React from "react";
 import imgs from "../Images/pic2.jpg";
 import imgs2 from "../Images/pics.jpg";
 import Navbarx from "../Components/Nav";
+import Navz from "../Components/Navz";
 import img2 from "../Images/pic3.jpg";
+import Footer from "../Components/Footer";
+import Subscribe from "../Components/Subscribe";
+
+
+
+
 export default function AllProperties() {
   return (
     <div>
-      <Navbarx />
+      {/* <Navbarx /> */}
+      <Navz/>
 
       <header>
         <div className="justify-center m-auto pt-20">
@@ -35,7 +43,7 @@ export default function AllProperties() {
 
               <div className="pt-2">
                 <select name="beds" id="" placeholder="select" className="p-2">
-                  <option value="1">1 bedroom</option>
+                  <option value="1" >1 bedroom</option>
                   <option value="2">2 bedroom</option>
                   <option value="3">3 bedroom</option>
                 </select>
@@ -243,6 +251,15 @@ export default function AllProperties() {
           </>
         </div>
       </section>
+
+      <section>
+        <Subscribe />
+      </section>
+
+      <footer>
+        <Footer />
+      </footer>
+
     </div>
   );
 }

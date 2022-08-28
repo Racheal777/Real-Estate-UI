@@ -24,7 +24,7 @@ filter: brightness(70%);
 
 
 
-input, select, textarea{
+input, select, option, textarea{
   width: 100%;
   margin: 0.6em 0.6em;
   padding: 10px 17px;
