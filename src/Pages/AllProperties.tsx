@@ -6,6 +6,7 @@ import Navz from "../Components/Navz";
 import img2 from "../Images/pic3.jpg";
 import Footer from "../Components/Footer";
 import Subscribe from "../Components/Subscribe";
+import { Pagination} from 'flowbite-react'
 
 
 
@@ -13,12 +14,12 @@ import Subscribe from "../Components/Subscribe";
 export default function AllProperties() {
   return (
     <div>
-      {/* <Navbarx /> */}
-      <Navz/>
+      <Navbarx />
+      {/* <Navz/> */}
 
       <header>
         <div className="justify-center m-auto pt-20">
-          <h2 className="text-white flex justify-center text-6xl p-2 font-sans font-bold">
+          <h2 className="text-white flex justify-center text-6xl p-2 m-8 font-sans font-bold">
             FIND YOUR BEST PROPERTY
           </h2>
           <p className="text-white justify-center text-center">
@@ -250,6 +251,15 @@ export default function AllProperties() {
             </section>
           </>
         </div>
+
+        {/* <Pagination
+  currentPage={1}
+  onPageChange={onPageChange}
+  showIcons={true}
+  totalPages={100}
+/> */}
+
+
       </section>
 
       <section>

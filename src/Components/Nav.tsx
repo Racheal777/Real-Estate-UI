@@ -1,49 +1,71 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-//import 'bootswatch/dist/flatly/bootstrap.min.css'; 
-
+import { Navbar, Dropdown, Avatar } from "flowbite-react";
 function Navbarx() {
   return (
-    <nav className=' bg-slate-300 px-2 sm:px-4 py-2.5 dark:bg-gray-900  w-full z-20 top-0 left-0 flex justify-between'>
-    <Navbar expand="lg" >
-      <Container >
-        
-        <div>
-        <Navbar.Brand href="/" >Rentax</Navbar.Brand>
-        </div>
-       
-        <Navbar.Toggle aria-controls="basic-navbar-nav" data-collapse-toggle="navbar-sticky"
-              type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-             
-              aria-expanded="false" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto" id="navbar-sticky">
+    <div>
+      <Navbar>
+        <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+          <div className="container flex flex-wrap justify-between items-center mx-auto">
+            <a
+              href="https://flowbite.com/"
+              className="flex items-center no-underline"
+            >
+              <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                className="mr-3 h-6 sm:h-9"
+                alt="Flowbite Logo"
+              />
+              <span className="self-center text-2xl  text-orange-600 font-semibold whitespace-nowrap dark:text-white">
+                Rent
+              </span>
+            </a>
 
-            <div className='flex'>
-            <Nav.Link href="/">Home</Nav.Link>
-           
-           <Nav.Link href="/">About</Nav.Link>
-           <Nav.Link href="/allproperties">Properties</Nav.Link>
-           <Nav.Link href="/signup">Contact</Nav.Link>
-            </div>
             
+            <div className="flex md:order-2">
+              <Dropdown
+                arrowIcon={false}
+                inline={true}
+                label={
+                  <Avatar
+                    alt="User settings"
+                    img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    rounded={true}
+                  />
+                }
+              >
+                <Dropdown.Header>
+                  <span className="block text-sm">Racheal Kuranchie</span>
+                  <span className="block truncate text-sm font-medium">
+                    racheal@gmail.com
+                  </span>
+                </Dropdown.Header>
+                <Dropdown.Item>Dashboard</Dropdown.Item>
+                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item>Favorites</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item>Sign out</Dropdown.Item>
+              </Dropdown>
+            </div>
 
-            <div className='flex justify-end '>
-            <Nav.Link href="/signup">Signup</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-            </div>
-            
-            
-               
-          </Nav>
-        </Navbar.Collapse>
-       
-      </Container>
-    </Navbar>
-    </nav>
+
+            <Navbar.Toggle
+              data-collapse-toggle="navbar-sticky"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            />
+
+            <Navbar.Collapse>
+              <Navbar.Link href="/" active={true}>
+                Home
+              </Navbar.Link>
+              <Navbar.Link href="/">About</Navbar.Link>
+              <Navbar.Link href="/">Services</Navbar.Link>
+              <Navbar.Link href="/allapartments">Apartments</Navbar.Link>
+              <Navbar.Link href="/">Contact</Navbar.Link>
+            </Navbar.Collapse>
+          </div>
+        </nav>
+      </Navbar>
+    </div>
   );
 }
 
