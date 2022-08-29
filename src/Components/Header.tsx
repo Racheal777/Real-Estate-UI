@@ -5,7 +5,7 @@ export default function Header() {
     <div>
       <header>
         <div className="justify-center m-auto pt-20">
-          <h2 className="text-white flex justify-center md:text-6xl p-4 mt-8 font-sans font-bold">
+          <h2 className="text-white flex justify-center md:text-6xl md:p-4 mt-8 font-sans font-bold">
             FIND YOUR BEST PROPERTY
           </h2>
           <p className="text-white justify-center text-center">

@@ -35,7 +35,7 @@ export default function AllProperties() {
         </div>
 
         <div className="grid grid-rows-5   grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-2 p-2">
-          <div className=" md:mx-2 pt-2 mx-2  row-span-5">
+          <div className=" md:mx-2 pt-2 mx-1  row-span-5">
             <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
               <h3 className="text-white">Filter Here</h3>
               <div className="m-2 pb-2">
@@ -73,7 +73,7 @@ export default function AllProperties() {
             </form>
 
             <div className="md:mx-2 pt-2 mx-2"></div>
-            <div className="my-8 py-8">
+            {/* <div className="my-8 py-8">
             <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
                 <h4 className="font-bold p-3 text-white">Say Hello</h4>
                 <input type="text" name="" placeholder="name" className="my-2" />
@@ -83,7 +83,7 @@ export default function AllProperties() {
                 Submit
               </button>
             </form>
-        </div>
+        </div> */}
 
           </div>
 
@@ -129,7 +129,7 @@ export default function AllProperties() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-2 m-4">
+                    <div className="p-2 md:m-4">
                       <a
                         href="/one"
                         target="_blank"
@@ -142,7 +142,7 @@ export default function AllProperties() {
                       </a>
                       <p className="text-slate-500">{item.description}</p>
 
-                      <div className="flex justify-evenly pt-4 text-white">
+                      <div className="flex justify-evenly py-2 text-white">
                         {item.amenities.map((tool) => (
                             
                                 <p className="bg-orange-600 p-1">{tool}</p>
