@@ -33,7 +33,7 @@ export default function Navz() {
               </Navbar.Link>
               <Navbar.Link  href="/" >About</Navbar.Link>
               <Navbar.Link href="/">Services</Navbar.Link>
-              <Navbar.Link href="/allapartments">Apartments</Navbar.Link>
+              <Navbar.Link href="/allproperties">Apartments</Navbar.Link>
               <Navbar.Link href="/">Contact</Navbar.Link>
               <div className="flex md:order-2 sm:m-2 md:m-0">
                 <button

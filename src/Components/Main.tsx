@@ -10,6 +10,7 @@ import Header from "./Header";
 import Numbers from "./Numbers";
 import Facilities from "./Facilities";
 import Navz from "./Navz";
+import Team from "./Team";
 
 export default function Main() {
   return (
@@ -37,8 +38,15 @@ export default function Main() {
       </section>
 
       <section>
+      <Team/>
+    </section>
+
+    
+      <section>
         <Testimonials />
       </section>
+
+    
 
       <section>
         <Subscribe />
