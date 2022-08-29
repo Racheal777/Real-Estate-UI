@@ -13,20 +13,10 @@ import Navz from "./Navz";
 
 export default function Main() {
   return (
-    <div className="md:container md:mx-auto">
+    <div className="md:container md:mx-auto overflow-hidden">
       {/* <Navbarx /> */}
       <Navz/>
 
-{/* <div>ygyugluglgu;bybybl;ubbbb
-  <br />
-  nu;un;iylbg
-  <br />
-  uuiiugug
-  <br />
-  uhuh
-  <br />
-  bnujbujbn
-</div> */}
       <Header />
       <section>
         <About />

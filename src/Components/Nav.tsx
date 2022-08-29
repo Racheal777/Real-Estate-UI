@@ -15,7 +15,7 @@ function Navbarx() {
                 alt="Flowbite Logo"
               />
               <span className="self-center text-2xl  text-orange-600 font-semibold whitespace-nowrap dark:text-white">
-                Rent
+                Oakberry Estates
               </span>
             </a>
             <Navbar.Toggle
@@ -26,7 +26,7 @@ function Navbarx() {
 
             <Navbar.Collapse>
             
-            <div className="flex md:order-2 p-3">
+            <div className="flex md:order-2 px-3">
               <Dropdown
                 arrowIcon={false}
                 inline={true}
@@ -54,13 +54,16 @@ function Navbarx() {
 
 
             
-              <Navbar.Link  href="/" active={true}>
+              <Navbar.Link  href="/" >
                 Home
               </Navbar.Link>
               <Navbar.Link  href="/">About</Navbar.Link>
               <Navbar.Link href="/">Services</Navbar.Link>
               <Navbar.Link href="/allapartments">Apartments</Navbar.Link>
               <Navbar.Link href="/">Contact</Navbar.Link>
+              {/* <li>
+          <a href="" className="block no-underline text-lg py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Team</a>
+        </li> */}
             </Navbar.Collapse>
           </div>
         </nav>

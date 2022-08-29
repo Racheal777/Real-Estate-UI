@@ -80,7 +80,7 @@ export default function Facilities() {
                 />
               </svg>
 
-              <h4>Arena</h4>
+              <h4>Sports Arena</h4>
             </div>
 
             <p className="text-slate-400">

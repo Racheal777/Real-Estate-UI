@@ -4,21 +4,21 @@ export default function About() {
   return (
     <div className="container mx-auto font-sans">
       <section className="m-0">
-        <div className="mt-12 pt-5 pb-5 text-center">
-          <h2 className="font-bold">Why we are the best</h2>
-          <h4 className="text-slate-400">The best to ever do it</h4>
+        <div className="mt-12 pt-5 pb-2 text-center">
+          <h2 className="font-bold uppercase">Why choose us?</h2>
+          <h4 className="text-slate-400 m-2 px-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe </h4>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 m-2 p-4 gap-x-10 gap-y-12">
-          <div className="bg-slate-100 hover:-translate-y-1 hover:scale-110  duration-300 hover:shadow-2xl hover:bg-orange-900 hover:text-white p-4">
-            <div className="flex">
+        <div className="grid  grid-cols-1 md:grid-cols-3 m-2 p-4  text-center">
+          <div className="p-6">
+            <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 m-2 "
+                className="w-6 h-6 m-2 mx-auto "
               >
                 <path
                   stroke-linecap="round"
@@ -32,19 +32,19 @@ export default function About() {
 
             <p className="text-slate-400">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse sed
-               repudiandae to?
+               repudiandae  consecteturto?
             </p>
           </div>
 
-          <div className="bg-slate-100 hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-orange-900 hover:text-white p-4">
-            <div className="flex">
+          <div className=" p-4">
+            <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 m-1 "
+                className="w-6 h-6 m-1 mx-auto "
               >
                 <path
                   stroke-linecap="round"
@@ -53,7 +53,7 @@ export default function About() {
                 />
               </svg>
 
-              <h4>Expect Agents</h4>
+              <h4>Good Security</h4>
             </div>
 
             <p className="text-slate-400">
@@ -62,15 +62,15 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-slate-100  hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-orange-900 hover:text-white p-4">
-            <div className="flex">
+          <div className="p-4">
+            <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 m-1 "
+                className="w-6 h-6 m-1 mx-auto "
               >
                 <path
                   stroke-linecap="round"
@@ -79,7 +79,7 @@ export default function About() {
                 />
               </svg>
 
-              <h4>Expect Agents</h4>
+              <h4>Portable Water</h4>
             </div>
 
             <p className="text-slate-400">

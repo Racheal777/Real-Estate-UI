@@ -46,7 +46,7 @@ export default function Subscribe() {
             </div>
           </div>
 
-          <div className=" justify-self-center py-2 ">
+          <div className="pic justify-self-center py-2 ">
               
               <img src={img2} alt="pic" className="" />
             

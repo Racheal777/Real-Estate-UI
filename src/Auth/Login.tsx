@@ -93,7 +93,7 @@ export default function Login() {
 
               <div className="p-4">
               <h3 className="self-center p-4 text-2xl  text-orange-600 font-semibold whitespace-nowrap dark:text-white">
-                Rent
+              Oakberry Estates
               </h3>
            
             <p className="p-2">

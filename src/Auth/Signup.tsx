@@ -120,7 +120,7 @@ export default function Signup() {
 
               <div className="p-4 m-4">
               <span className="self-center text-2xl  text-orange-600 font-semibold whitespace-nowrap dark:text-white">
-                Rent
+              Oakberry Estates
               </span>
           
             <p>

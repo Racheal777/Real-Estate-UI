@@ -17,7 +17,7 @@ export default function Navz() {
                 alt="Flowbite Logo"
               />
               <span className="self-center text-2xl  text-orange-600 font-semibold whitespace-nowrap dark:text-white">
-                Rent
+              Oakberry Estates
               </span>
             </a>
 
@@ -35,10 +35,10 @@ export default function Navz() {
               <Navbar.Link href="/">Services</Navbar.Link>
               <Navbar.Link href="/allapartments">Apartments</Navbar.Link>
               <Navbar.Link href="/">Contact</Navbar.Link>
-              <div className="flex md:order-2 m-2">
+              <div className="flex md:order-2 sm:m-2 md:m-0">
                 <button
                   type="button"
-                  className="text-white bg-orange-700 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white bg-orange-700 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   <a
                     href="/login"
