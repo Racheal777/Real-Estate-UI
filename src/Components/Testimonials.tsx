@@ -9,8 +9,8 @@ export default function Testimonials() {
           Client Testimonials
         </h2>
 
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-          <Carousel>
+        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 py-4 m-2 overflow-hidden">
+          <Carousel className="my-5">
             <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
               <figure className="max-w-screen-md mx-auto">
                 <svg

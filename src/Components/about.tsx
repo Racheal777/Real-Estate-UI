@@ -6,7 +6,7 @@ export default function About() {
       <section className="m-0">
         <div className="mt-12 pt-5 pb-2 text-center">
           <h2 className="font-bold uppercase">Why choose us?</h2>
-          <h4 className="text-slate-400 m-2 px-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe </h4>
+          <h4 className="text-slate-400 m-2 md:px-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe </h4>
         </div>
 
         <div className="grid  grid-cols-1 md:grid-cols-3 m-2 p-4  text-center">

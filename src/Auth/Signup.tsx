@@ -25,7 +25,7 @@ export default function Signup() {
   return (
     <div className="">
       <section className="grid grid-cols-1 md:grid-cols-2  ">
-        <form className="m-8 p-6" onSubmit={handleSubmit(onSubmit)}>
+        <form className="md:m-8 md:p-6 p-2" onSubmit={handleSubmit(onSubmit)}>
           <a
             href="https://flowbite.com/"
             className="flex items-center no-underline py-2"

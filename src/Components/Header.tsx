@@ -13,7 +13,7 @@ export default function Header() {
             quaerat distin
           </p>
 
-          <form className="flex items-center w-1/2 m-auto">
+          <form className="flex items-center md:w-1/2 m-auto">
             <label className="sr-only">Search</label>
             <div className="relative w-full">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

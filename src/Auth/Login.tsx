@@ -16,7 +16,7 @@ export default function Login() {
   return (
     <div>
       <section className="grid grid-cols-1 md:grid-cols-2  ">
-        <form className="m-10 p-10" onSubmit={handleSubmit(onSubmit)}>
+        <form className="md:m-10 md:p-10 p-2" onSubmit={handleSubmit(onSubmit)}>
 
           <div className="text-center p-6 text-2xl">
           <a

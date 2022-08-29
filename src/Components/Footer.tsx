@@ -5,7 +5,7 @@ export default function Footer() {
     <div >
         <footer className="mb-0">
       <section className="bg-slate-800   grid grid-cols-1 gap-2 md:grid-cols-4 p-8 px-16 text-white">
-        <div className="my-8 py-8 ">
+        <div className="md:my-8 md:py-8 ">
           <h4 className="font-bold p-3 text-orange-600">Oakberry Estate</h4>
           <div className="flex justify-start p-2">
             <svg
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="my-8 py-8  ">
+        <div className="md:my-8 md:py-8  ">
             <h4 className="font-bold p-3  ">Links</h4>
             <ul className="">
                 <li className="py-2 "><a href="/" className=" hover:text-orange-500 no-underline">Our properties</a></li>
@@ -54,7 +54,7 @@ export default function Footer() {
             
         </div>
 
-        <div className="my-8 py-8">
+        <div className="md:my-8 md:py-8">
             <form action="">
                 <h4 className="font-bold p-3 ">Say Hello</h4>
                 <input type="text" name="" placeholder="name" className="my-2" />
@@ -66,7 +66,7 @@ export default function Footer() {
             </form>
         </div>
 
-        <div className="my-8 py-8 text-white">
+        <div className="md:my-8 md:py-8 text-white">
             <h4 className="font-bold p-3 ">Contact us</h4>
 
             <ul>
