@@ -11,7 +11,7 @@ header{
   background-attachment: fixed;
 }
 
-Navbar a{
+a{
 
   text-decoration: none;
   font-size: 1em;
@@ -97,7 +97,18 @@ label{
     background-position: center center;
 }
 
-
+.slider{
+  /* background-image:linear-gradient(rgba(0, 0, 0, 0.5), 
+  rgba(0, 0, 0, 0.5)), url('../src/Images/pic6.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  width: 100%;
+  min-height: 65vh;
+  padding: 2em;
+ 
+  color: black;
+}
 /* .btn button:hover {
   background: #066e37;
   text-decoration: none;

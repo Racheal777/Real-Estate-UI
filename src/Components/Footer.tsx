@@ -4,36 +4,11 @@ export default function Footer() {
   return (
     <div >
         <footer className="mb-0">
-      <section className="bg-slate-800   grid grid-cols-1 gap-2 md:grid-cols-4 p-8 px-16 text-white">
-        <div className="md:my-8 md:py-8 ">
-          <h4 className="font-bold p-3 text-orange-600">Oakberry Estate</h4>
-          <div className="flex justify-start p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5 mx-2"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
-                clip-rule="evenodd"
-              />
-            </svg>
+      <section className="bg-slate-800 grid grid-cols-1 gap-2 md:grid-cols-4 p-8 px-16 ">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            </div>
+        <div className="md:my-8 md:py-8 mx-4 ">
+          <h4 className="font-bold py-3 text-white">Oakberry Estate</h4>
+          
             <p className="text-slate-300">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
               illum consectetur! Veniam, adipisci asperiores. Blanditiis ut
@@ -43,20 +18,20 @@ export default function Footer() {
         </div>
 
 
-        <div className="md:my-8 md:py-8  ">
-            <h4 className="font-bold p-3  ">Links</h4>
-            <ul className="">
-                <li className="py-2 "><a href="/" className=" hover:text-orange-500 no-underline">Our properties</a></li>
-                <li className="py-2 "><a href="/" className="hover:text-orange-500 no-underline">Affordable housing</a></li>
-                <li className="py-2 "><a href="/" className="hover:text-orange-500 no-underline">Our staff</a></li>
-                <li className="py-2 "><a href="/" className="hover:text-orange-500 no-underline">Our Community</a></li>
-            </ul>
+        <div className="md:my-8 md:py-8 mx-4 ">
+            <h4 className="font-bold py-3 text-white ">Links</h4>
+            
+                <li className="py-2 list-none"><a href="/" className=" hover:text-orange-500 no-underline">Our properties</a></li>
+                <li className="py-2 list-none"><a href="/" className="hover:text-orange-500 no-underline">Affordable housing</a></li>
+                <li className="py-2 list-none"><a href="/" className="hover:text-orange-500 no-underline">Our staff</a></li>
+                <li className="py-2 list-none "><a href="/" className="hover:text-orange-500 no-underline">Our Community</a></li>
+           
             
         </div>
 
-        <div className="md:my-8 md:py-8">
+        <div className="md:my-8 md:py-8 mx-4">
             <form action="">
-                <h4 className="font-bold p-3 ">Say Hello</h4>
+                <h4 className="font-bold py-3 text-white ">Say Hello</h4>
                 <input type="text" name="" placeholder="name" className="my-2" />
                 <input type="email" name="" placeholder="email" className="my-2"  />
                 <textarea name="" id=""  placeholder="message" className="my-2" ></textarea>
@@ -66,15 +41,15 @@ export default function Footer() {
             </form>
         </div>
 
-        <div className="md:my-8 md:py-8 text-white">
-            <h4 className="font-bold p-3 ">Contact us</h4>
+        <div className="md:my-8 md:py-8 mx-4 text-white">
+            <h4 className="font-bold py-3 ">Contact us</h4>
 
-            <ul>
-            <li className="py-2 "><a href="/" className="no-underline  hover:text-orange-500">Oxford street Osu, Accra, Ghana</a></li>
-                <li className="py-2 ">0542802959</li>
-                <li className="py-2 "><a href="/" className="no-underline  hover:text-orange-500">www.relestate.com</a></li>
-                <li className="py-2 "><a href="/" className="hover:text-orange-500 no-underline">racheal@gmail.com</a></li>
-            </ul>
+           
+            <li className="py-2 list-none"><a href="/" className="no-underline  hover:text-orange-500">Oxford street Osu, Accra, Ghana</a></li>
+                <li className="py-2 list-none ">0542802959</li>
+                <li className=" py-2 list-none"><a href="/" className="no-underline  hover:text-orange-500">www.relestate.com</a></li>
+                <li className="py-2 list-none "><a href="/" className="text-white hover:text-orange-500 no-underline">racheal@gmail.com</a></li>
+          
         </div>
       </section>
 
