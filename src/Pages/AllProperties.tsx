@@ -116,7 +116,7 @@ export default function AllProperties({items}: PropertyProps) {
                       key={id}
                       className=" hover:bg-slate-900 hover:text-white"
                     >
-                      <img src={item.images[0]} alt="pic" />
+                      <img src={item.images?.[0]} alt="pic" />
 
                       <div className="flex justify-center p-2">
                         <div>

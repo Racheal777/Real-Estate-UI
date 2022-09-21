@@ -1,12 +1,12 @@
 import React from 'react'
 
 export interface PropertyAttribute {
-    name?: string
-    location?:string
-    facilities?: string,
-    amenities?: string
-    rent?: number
-    description?: string
+    name: string
+    location:string
+    facilities: string
+    amenities: string
+    rent: number
+    description: string
     images: string  
 }
 

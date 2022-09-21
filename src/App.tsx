@@ -15,20 +15,18 @@ import apiCalls from './Services/api'
 
 function App() {
 
-  const[property, setProperties] = useState<PropertyAttribute[]>([] as PropertyAttribute[])
+  const[property, setProperties] = useState<PropertyAttribute[]>([])
 
+  
+ 
   const loadProperties = async () => {
+    //const properties =   await apiCalls.getAllProperties()
     const property =  await apiCalls.getAllProperties();
    
     //error
-  //  console.log(property)
-  //  if(property){
-  //     setProperties(property)
-  //  }else{
-  //    setProperties(property)
-  //  }
-    //setProperties([...property])
-     //setProperties(property)
+    console.log(property)
+    //setProperties(property)
+  
 
   }
 
@@ -36,6 +34,7 @@ function App() {
     loadProperties()
   }, [])
 
+  
   
   return (
     <>
@@ -47,7 +46,7 @@ function App() {
         <Route path='/property' element={<Property/>}></Route>
       </Routes>
      
-      {/* <Navbar/> */}
+     
     </>
   );
 }
