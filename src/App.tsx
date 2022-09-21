@@ -18,10 +18,17 @@ function App() {
   const[property, setProperties] = useState<PropertyAttribute[]>([] as PropertyAttribute[])
 
   const loadProperties = async () => {
-   const property =  await apiCalls.getAllProperties();
+    const property =  await apiCalls.getAllProperties();
    
-   console.log(property)
-    setProperties(property)
+    //error
+  //  console.log(property)
+  //  if(property){
+  //     setProperties(property)
+  //  }else{
+  //    setProperties(property)
+  //  }
+    //setProperties([...property])
+     //setProperties(property)
 
   }
 
