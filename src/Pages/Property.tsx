@@ -16,13 +16,11 @@ export default function Property() {
           <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
               <h3 className="text-white">Filter Here</h3>
               <div className="m-2 pb-2">
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="search"
-                  className=""
-                />
+              <select name="beds" id="" placeholder="select" className="p-2">
+                  <option value="1">Adenta</option>
+                  <option value="2">East Legon</option>
+                  <option value="3">Airport</option>
+                </select>
               </div>
 
               <div className="m-2">

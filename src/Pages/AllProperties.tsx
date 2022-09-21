@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
+import apiCalls from '../Services/api'
 import imgs from "../Images/pic2.jpg";
 import imgs2 from "../Images/pics.jpg";
 import Navbarx from "../Components/Nav";
@@ -8,9 +9,26 @@ import Footer from "../Components/Footer";
 import Subscribe from "../Components/Subscribe";
 import { Pagination } from "flowbite-react";
 import { Data } from "../data";
+import {PropertyAttribute} from '../Components/PropertyForm'
 
-export default function AllProperties() {
-  let houses = Data();
+// interface PropertyAttribute {
+//   name: string
+//   location:string
+//   facilities: string,
+//   amenities: string
+//   rent: number
+//   description: string
+//   images: string  
+// }
+
+interface PropertyProps{
+  items : PropertyAttribute[]
+}
+
+export default function AllProperties({items}: PropertyProps) {
+
+  
+  let houses = items;
 
   return (
     <div>
@@ -98,7 +116,7 @@ export default function AllProperties() {
                       key={id}
                       className=" hover:bg-slate-900 hover:text-white"
                     >
-                      <img src={item.img} alt="pic" />
+                      <img src={item.images[0]} alt="pic" />
 
                       <div className="flex justify-center p-2">
                         <div>
@@ -124,8 +142,8 @@ export default function AllProperties() {
                         </div>
 
                         <div className="font-bold">
-                          <p>For {item.status}</p>
-                          <h4>Ghc {item.price}/month</h4>
+                          <p>For Rent</p>
+                          <h4>Ghc {item.rent}/month</h4>
                         </div>
                       </div>
                     </div>
@@ -137,16 +155,14 @@ export default function AllProperties() {
                         className="no-underline "
                       >
                         <h4 className="py-4 text-slate-900 font-bold hover:text-orange-600 ">
-                          {item.title}
+                          {item.name}
                         </h4>
                       </a>
                       <p className="text-slate-500">{item.description}</p>
 
                       <div className="flex justify-evenly py-2 text-white">
-                        {item.amenities.map((tool) => (
-                            
-                                <p className="bg-orange-600 p-1">{tool}</p>
-                                ))} 
+                        
+                                <p className="bg-orange-600 p-1">{item.facilities}</p>
                       </div>
                         
                       
