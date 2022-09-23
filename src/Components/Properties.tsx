@@ -8,7 +8,7 @@ export default function Properties() {
   return (
     <div className=" font-sans bg-slate-100">
       <section className="mt-6 pt-4 pb-5  ">
-        <h2 className="text-center p-4">Popular Properties</h2>
+        <h2 className="text-center p-4">New Properties</h2>
 
         <div className="grid md:grid-cols-3 mx-6 md:m-2 p-4 gap-x-10 gap-y-12">
 

@@ -1,15 +1,15 @@
-import React,{useEffect, useState} from "react";
-import apiCalls from '../Services/api'
+import React, { useEffect, useState } from "react";
+import apiCalls from "../Services/api";
 import imgs from "../Images/pic2.jpg";
 import imgs2 from "../Images/pics.jpg";
 import Navbarx from "../Components/Nav";
 import Navz from "../Components/Navz";
-
+import face3 from "../Images/face3.jpg";
 import Footer from "../Components/Footer";
 import Subscribe from "../Components/Subscribe";
 import { Pagination } from "flowbite-react";
 import { Data } from "../data";
-import {PropertyAttribute} from '../Components/PropertyForm'
+import { PropertyAttribute } from "../Components/PropertyForm";
 
 // interface PropertyAttribute {
 //   name: string
@@ -18,17 +18,31 @@ import {PropertyAttribute} from '../Components/PropertyForm'
 //   amenities: string
 //   rent: number
 //   description: string
-//   images: string  
+//   images: string
 // }
-
-interface PropertyProps{
-  items : PropertyAttribute[]
+interface IPost {
+  id: number;
+  userId?: number;
+  title: string;
+  body: string;
 }
+type PropertyProps = {
+  posts: PropertyAttribute[];
+  //children: JSX.Element | JSX.Element[];
+};
 
-export default function AllProperties({items}: PropertyProps) {
+const properties: PropertyAttribute[] = [];
 
-  
-  let houses = items;
+export default function AllProperties({ posts }: PropertyProps) {
+  let houses = posts;
+  const pic = houses.map((imgg) => imgg.images[0]);
+  const url = "http://localhost:7070/images/" ;
+  // const image = "?not-from-cache-please";
+  // const imgs = new Image();
+  // imgs.crossOrigin = "Anonymous";
+  // imgs.src = url;
+
+  //console.log("image", imgs);
 
   return (
     <div>
@@ -90,22 +104,25 @@ export default function AllProperties({items}: PropertyProps) {
               </div>
             </form>
 
-            <div className="md:mx-2 pt-2 mx-2"></div>
-            {/* <div className="my-8 py-8">
-            <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
-                <h4 className="font-bold p-3 text-white">Say Hello</h4>
-                <input type="text" name="" placeholder="name" className="my-2" />
-                <input type="email" name="" placeholder="email" className="my-2"  />
-                <textarea name="" id=""  placeholder="message" className="my-2" ></textarea>
-                <button type="submit" className="bg-orange-600 text-white  px-4 py-2">
-                Submit
-              </button>
-            </form>
-        </div> */}
+            <div className="md:mx-2 pt-8 mx-2 md:mt-12">
+            <div className="rounded-lg">
+            <img src={face3} alt="pic" className="rounded hover:rounded-lg" />
 
+            <div className="pt-4">
+              <h4>James Kuranchie</h4>
+              <p>Estate Manager</p>
+              
+              <div>
+                <h5>Contact details</h5>
+                <hr />
+                <p> Phone: 0542802959</p>
+                <p>Email : kuranchieracheal@gmail.com</p>
+              </div>
+            </div>
           </div>
-
-          
+            </div>
+            
+          </div>
 
           <>
             {houses.map((item, id) => (
@@ -116,7 +133,7 @@ export default function AllProperties({items}: PropertyProps) {
                       key={id}
                       className=" hover:bg-slate-900 hover:text-white"
                     >
-                      <img src={item.images?.[0]} alt="pic" />
+                      <img src={url + item.images[0]} crossOrigin='anonymous' alt="pic"/>
 
                       <div className="flex justify-center p-2">
                         <div>
@@ -158,15 +175,22 @@ export default function AllProperties({items}: PropertyProps) {
                           {item.name}
                         </h4>
                       </a>
+                      <h4 className="text-slate-500">Located at : {item.location}</h4>
                       <p className="text-slate-500">{item.description}</p>
 
-                      <div className="flex justify-evenly py-2 text-white">
-                        
-                                <p className="bg-orange-600 p-1">{item.facilities}</p>
-                      </div>
-                        
                       
-                        
+
+                      <div className="flex justify-evenly py-2 text-white">
+                        {item.amenities.map((tools) => (
+                          <p className="bg-orange-600 p-1">{tools}</p>
+                        ))}
+                      </div>
+
+                      <div className="flex justify-evenly py-2 text-white">
+                        {item.facilities.map((tools) => (
+                          <p className="text-orange-600 p-1">{tools}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </section>

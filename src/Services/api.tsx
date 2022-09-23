@@ -1,7 +1,19 @@
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { PropertyAttribute } from "../Components/PropertyForm";
+//import { PropertyAttribute } from "../Components/PropertyForm";
+
+type PropertyAttribute = {
+  
+  name: string
+  location:string
+  facilities: string[],
+  amenities: string[]
+  rent: number
+  description: string
+  images: string[]
+  
+  }
 
 
 class apiCalls {
@@ -15,11 +27,11 @@ class apiCalls {
   async addProperty(
     name: string,
     location: string,
-    facilities: string,
-    amenities: string,
+    facilities: string[],
+    amenities: string[],
     rent: number,
     description: string,
-    images: string
+    images: string[]
   ) {
       try {
         const response = await this.http.post<PropertyAttribute>(
@@ -39,8 +51,12 @@ class apiCalls {
   //get all properties
   async getAllProperties(){
       try {
-       const response = await this.http.get<PropertyAttribute[]>('all-properties')
-       return response.data 
+        await this.http.get<PropertyAttribute[]>('all-properties')
+       .then(response =>{
+         console.log(response.data)
+         return response.data
+       })
+       
 
       } catch (error) {
         console.log(error)  
