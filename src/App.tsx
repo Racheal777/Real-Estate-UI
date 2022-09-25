@@ -66,7 +66,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/allproperties' element={<AllProperties posts ={posts}  />}></Route>
-        <Route path='/property' element={<Property/>}></Route>
+        <Route path='/property/:id' element={<Property/>}></Route>
       </Routes>
      
       

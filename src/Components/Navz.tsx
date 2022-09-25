@@ -31,7 +31,7 @@ export default function Navz() {
               <Navbar.Link href="/" active={true}>
                 Home
               </Navbar.Link>
-              <Navbar.Link  href="/" >About</Navbar.Link>
+              <Navbar.Link  href="/">About</Navbar.Link>
               <Navbar.Link href="/">Services</Navbar.Link>
               <Navbar.Link href="/allproperties">Apartments</Navbar.Link>
               <Navbar.Link href="/">Contact</Navbar.Link>

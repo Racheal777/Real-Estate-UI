@@ -11,10 +11,13 @@ import Facilities from "./Facilities";
 import Navz from "./Navz";
 import Team from "./Team";
 import Testimonials2 from "./Testimonials2";
+import {PropertyAttribute} from '../Components/PropertyForm'
+
+const properties:PropertyAttribute[] = []
 
 export default function Main() {
   return (
-    <div className="md:container md:mx-auto overflow-hidden">
+    <div className=" md:mx-auto overflow-hidden">
       {/* <Navbarx /> */}
       <Navz/>
 
@@ -24,7 +27,7 @@ export default function Main() {
       </section>
 
       <section>
-        <Properties />
+        <Properties/>
       </section>
 
       

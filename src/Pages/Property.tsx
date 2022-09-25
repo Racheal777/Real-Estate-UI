@@ -1,10 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbarx from "../Components/Nav";
 import Footer from "../Components/Footer";
 import img2 from "../Images/pic3.jpg";
 import Header from "../Components/Header";
+import {PropertyAttribute} from '../Components/PropertyForm'
+import axios from "axios";
+import { error } from "console";
+import { useParams } from "react-router-dom";
+
+type OneProperty = {
+  id: number
+  name: string,
+  location:string,
+  facilities: string[],
+  amenities: string[],
+  rent: number,
+  description: string,
+  images: string[]
+  
+}
+
+const properties:PropertyAttribute[] = []
 
 export default function Property() {
+  const [property, setProperty] = useState<PropertyAttribute>()
+
+  const {id} = useParams()
+
+  const url = "http://localhost:7070/images/" ;
+
+  useEffect(() => {
+    axios.get(`http://localhost:7070/api/property/one-property/${id}`)
+    .then(response => {
+      setProperty(response.data)
+      console.log(response.data)
+      console.log('prop', property)
+    }).catch((error) => console.log(error))
+  },[])
+
   return (
     <div>
       <Navbarx />
@@ -48,49 +81,68 @@ export default function Property() {
             </form>
           </div>
 
-          <div className="col-span-2 mx-6">
+          
+           
+              <div key={id} className="col-span-2 mx-6">
+
+           
             <div>
-              <img src={img2} alt="" />
+            <img src={url + property?.images[0]} crossOrigin='anonymous' alt="pic"/>
+
             </div>
 
             <div className="mx-auto p-2">
-              <h2 className="text-orange-500 py-3">1 bedroom self-contained</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
-                suscipit minima delectus molestias cumque reiciendis atque.
-                Perspiciatis quo placeat dolor laboriosam vero, reiciendis
-                laudantium blanditiis labore, fuga nostrum quia illo.
-              </p>
+              <h2 className="text-orange-500 py-3">{property?.name}</h2>
+              <p>Location: {property?.location}</p>
+              <p>Rent : GHC <strong>{property?.rent} </strong>per month</p>
+              
+
+              <p>{property?.description}</p>
             </div>
 
+            <h3 className="text-center">Amenities</h3>
             <div className="flex flex-row flex-wrap justify-center mx-auto p-4 text-white">
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
-              <p className="bg-orange-600 p-1 m-2">1 bed</p>
+ 
+              {property?.amenities?.map(tools => (
+                  <p className="bg-orange-600 p-1 m-2">{tools}</p>
+                  
+              ))}
+              
             </div>
 
+            <h3 className="text-center">Facilities</h3>
+            <div className="flex flex-row flex-wrap justify-center mx-auto p-4 ">
+           
+              {property?.facilities?.map(tools => (
+                <div>
+                  
+ <p className="bg-orange-600 p-1 m-2 text-white">{tools}</p>
+                </div>
+                 
+                  
+              ))}
+              
+            </div>
+
+            
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-center">
+            {property?.images.map(img => (
               <div className="hover:shadow-2xl hover:-translate-y-1 hover:scale-110  duration-300 ">
-                <img src={img2} alt="" />
-              </div>
+             
 
-              <div className="hover:shadow-2xl hover:-translate-y-1 hover:scale-110 duration-300 ">
-                <img src={img2} alt="" />
-              </div>
+              
+                <img src={url + img} crossOrigin='anonymous' alt="pic"/>
+                </div>
+             
 
-              <div className="hover:shadow-2xl hover:-translate-y-1 hover:scale-110 duration-300 ">
-                <img src={img2} alt="" />
-              </div>
-
-              <div className="hover:shadow-2xl hover:-translate-y-1 hover:scale-110 duration-300 ">
-                <img src={img2} alt="" />
-              </div>
-            </div>
+              
+           
+              ))}
+               </div>
           </div>
+
         </div>
+        
       </section>
 
       <Footer />

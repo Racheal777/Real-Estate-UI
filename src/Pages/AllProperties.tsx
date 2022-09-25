@@ -10,16 +10,9 @@ import Subscribe from "../Components/Subscribe";
 import { Pagination } from "flowbite-react";
 import { Data } from "../data";
 import { PropertyAttribute } from "../Components/PropertyForm";
+import { useParams } from "react-router-dom";
 
-// interface PropertyAttribute {
-//   name: string
-//   location:string
-//   facilities: string,
-//   amenities: string
-//   rent: number
-//   description: string
-//   images: string
-// }
+
 interface IPost {
   id: number;
   userId?: number;
@@ -37,12 +30,9 @@ export default function AllProperties({ posts }: PropertyProps) {
   let houses = posts;
   const pic = houses.map((imgg) => imgg.images[0]);
   const url = "http://localhost:7070/images/" ;
-  // const image = "?not-from-cache-please";
-  // const imgs = new Image();
-  // imgs.crossOrigin = "Anonymous";
-  // imgs.src = url;
 
-  //console.log("image", imgs);
+  const {ids} = useParams()
+  
 
   return (
     <div>
@@ -166,8 +156,8 @@ export default function AllProperties({ posts }: PropertyProps) {
                     </div>
                     <div className="p-2 md:m-4">
                       <a
-                        href="/one"
-                        target="_blank"
+                        href= {`/property/${item.id}`}
+                        
                         rel="noopener noreferrer"
                         className="no-underline "
                       >

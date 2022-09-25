@@ -1,6 +1,7 @@
 import React from 'react'
 
 export interface PropertyAttribute {
+  id:number
   name: string
   location:string
   facilities: string[],
@@ -8,7 +9,7 @@ export interface PropertyAttribute {
   rent: number
   description: string
   images: string[]
-  children: JSX.Element|JSX.Element[];
+  
 }
 
 
