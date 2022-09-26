@@ -46,7 +46,7 @@ export default function Properties() {
               <div className="p-3 text-center">
                 <a
                   href={`/property/${item.id}`}
-                  target="_blank"
+                  
                   rel="noopener noreferrer"
                   className="no-underline"
                 >
