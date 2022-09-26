@@ -12,7 +12,6 @@ import { Data } from "../data";
 import { PropertyAttribute } from "../Components/PropertyForm";
 import { useParams } from "react-router-dom";
 
-
 interface IPost {
   id: number;
   userId?: number;
@@ -29,10 +28,9 @@ const properties: PropertyAttribute[] = [];
 export default function AllProperties({ posts }: PropertyProps) {
   let houses = posts;
   const pic = houses.map((imgg) => imgg.images[0]);
-  const url = "http://localhost:7070/images/" ;
+  const url = "http://localhost:7070/images/";
 
-  const {ids} = useParams()
-  
+  const { ids } = useParams();
 
   return (
     <div>
@@ -95,23 +93,26 @@ export default function AllProperties({ posts }: PropertyProps) {
             </form>
 
             <div className="md:mx-2 pt-8 mx-2 md:mt-12">
-            <div className="rounded-lg">
-            <img src={face3} alt="pic" className="rounded hover:rounded-lg" />
+              <div className="rounded-lg">
+                <img
+                  src={face3}
+                  alt="pic"
+                  className="rounded hover:rounded-lg"
+                />
 
-            <div className="pt-4">
-              <h4>James Kuranchie</h4>
-              <p>Estate Manager</p>
-              
-              <div>
-                <h5>Contact details</h5>
-                <hr />
-                <p> Phone: 0542802959</p>
-                <p>Email : kuranchieracheal@gmail.com</p>
+                <div className="pt-4">
+                  <h4>James Kuranchie</h4>
+                  <p>Estate Manager</p>
+
+                  <div>
+                    <h5>Contact details</h5>
+                    <hr />
+                    <p> Phone: 0542802959</p>
+                    <p>Email : kuranchieracheal@gmail.com</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-            </div>
-            
           </div>
 
           <>
@@ -123,7 +124,11 @@ export default function AllProperties({ posts }: PropertyProps) {
                       key={id}
                       className=" hover:bg-slate-900 hover:text-white"
                     >
-                      <img src={url + item.images[0]} crossOrigin='anonymous' alt="pic"/>
+                      <img
+                        src={url + item.images[0]}
+                        crossOrigin="anonymous"
+                        alt="pic"
+                      />
 
                       <div className="flex justify-center p-2">
                         <div>
@@ -156,8 +161,7 @@ export default function AllProperties({ posts }: PropertyProps) {
                     </div>
                     <div className="p-2 md:m-4">
                       <a
-                        href= {`/property/${item.id}`}
-                        
+                        href={`/property/${item.id}`}
                         rel="noopener noreferrer"
                         className="no-underline "
                       >
@@ -165,10 +169,10 @@ export default function AllProperties({ posts }: PropertyProps) {
                           {item.name}
                         </h4>
                       </a>
-                      <h4 className="text-slate-500">Located at : {item.location}</h4>
+                      <h4 className="text-slate-500">
+                        Located at : {item.location}
+                      </h4>
                       <p className="text-slate-500">{item.description}</p>
-
-                      
 
                       <div className="flex justify-evenly py-2 text-white">
                         {item.amenities.map((tools) => (
