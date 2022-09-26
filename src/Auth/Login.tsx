@@ -20,7 +20,7 @@ export default function Login() {
 
           <div className="text-center p-6 text-2xl">
           <a
-            href="https://flowbite.com/"
+            href="/"
             className="items-center no-underline py-4 text-center mx-auto"
           >
             <img

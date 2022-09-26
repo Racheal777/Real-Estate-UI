@@ -12,9 +12,12 @@ import { useParams } from "react-router-dom";
 export default function Property() {
   const [property, setProperty] = useState<PropertyAttribute>();
   const [house, setHouse] = useState<PropertyAttribute[]>([]);
+  const [results, setResults] = useState<PropertyAttribute[]>([]);
 
+  //id for the params on displaying one object
   const { id } = useParams();
 
+  //url for displaying image
   const url = "http://localhost:7070/images/";
 
   useEffect(() => {
@@ -32,6 +35,7 @@ export default function Property() {
       .catch((error) => console.log(error));
   }, []);
 
+  
   let allData: PropertyAttribute[] = [];
 
   const allProperties = async () => {
@@ -41,29 +45,49 @@ export default function Property() {
     allData = response.data;
     setHouse(response.data);
 
+    //console.log("all", allData);
+  };
+
+  //search property
+  const searchProperties = async () => {
+    const response = await axios.get<PropertyAttribute[]>(
+      "http://localhost:7070/api/property/search/:location/:name/:rent"
+    );
+    allData = response.data;
+    setResults(response.data);
+
     console.log("all", allData);
   };
 
-  //console.log('jjjj',allData);
-
   useEffect(() => {
     allProperties();
+    searchProperties();
   }, []);
 
   //filtering to display similar house based on location
   let remainingArray: PropertyAttribute[] = [];
   let filtered: PropertyAttribute[] = [];
+  let finalLists: PropertyAttribute[] = [];
 
+  //filtered the array without the id
   const filteredArray = async () => {
     remainingArray = house.filter((item) => item.id !== property?.id);
-    filtered = remainingArray.filter(
+    finalLists = remainingArray.filter(
       (apartment) => apartment.location === property?.location
     );
+    //filter the array based on the location
+    //if finalist doesnt contain anything, display first 3 property
+    //else display the ones found
+    if (finalLists.length === 0) {
+      filtered = remainingArray.slice(0, 3);
+    } else {
+      filtered = finalLists.slice(0, 4);
+    }
 
-    console.log("final list", filtered);
+    // console.log("final list", filtered);
 
-    console.log("filter", remainingArray);
-    console.log("onedata", house);
+    // console.log("filter", remainingArray);
+    // console.log("onedata", house);
   };
 
   filteredArray();
@@ -72,9 +96,22 @@ export default function Property() {
     <div>
       <Navbarx />
 
-      <Header />
-      <section>
-        <div className="grid    grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-4 p-4">
+      <header>
+        <div className="justify-center m-auto pt-20">
+          <h2 className="text-white flex justify-center text-center md:text-6xl p-2 m-8 font-sans font-bold">
+            FIND YOUR BEST PROPERTY
+          </h2>
+          <p className="text-white justify-center text-center px-6">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+            quaerat distin
+          </p>
+        </div>
+
+        <div></div>
+      </header>
+
+      <section className="mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-4 p-4">
           <div className=" md:mx-2 pt-2 mx-2 ">
             <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
               <h3 className="text-white">Filter Here</h3>
@@ -195,7 +232,6 @@ export default function Property() {
                 <div className="p-3 text-center">
                   <a
                     href={`/property/${item.id}`}
-                    
                     rel="noopener noreferrer"
                     className="no-underline"
                   >
@@ -232,8 +268,17 @@ export default function Property() {
                     ))}
                   </div>
                 </div>
+                <p></p>
               </div>
             ))}
+
+            <div className="text-center">
+              <button className="rounded-full bg-orange-600  m-2 px-4 py-2 text-center">
+                <a href="/allproperties" className="text-white no-underline">
+                  View More
+                </a>
+              </button>
+            </div>
           </div>
         </section>
       </section>

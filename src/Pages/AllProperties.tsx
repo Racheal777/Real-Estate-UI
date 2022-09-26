@@ -23,7 +23,7 @@ type PropertyProps = {
   //children: JSX.Element | JSX.Element[];
 };
 
-const properties: PropertyAttribute[] = [];
+//const properties: PropertyAttribute[] = [];
 
 export default function AllProperties({ posts }: PropertyProps) {
   let houses = posts;
