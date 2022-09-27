@@ -3,6 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <div>
+
       <header>
         <div className="justify-center m-auto pt-20">
           <h2 className="text-white flex justify-center md:text-6xl md:p-4 mt-8 font-sans font-bold">
@@ -61,6 +62,7 @@ export default function Header() {
             </button>
           </form>
         </div>
+        
       </header>
     </div>
   );

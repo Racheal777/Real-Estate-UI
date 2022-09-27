@@ -5,7 +5,7 @@ import {Carousel } from 'react-bootstrap';
 function Testimonials2() {
   return (
 
-<section>
+<section className='m-4'>
 <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center ">
           Client Testimonials
         </h2>

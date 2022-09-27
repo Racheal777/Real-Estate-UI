@@ -29,10 +29,10 @@ export default function Properties() {
 
   return (
     <div className=" font-sans bg-slate-100">
-      <section className="mt-6 pt-4 pb-5  ">
+      <section className="mt-6 mx-5 pt-4 pb-5  ">
         <h2 className="text-center p-4">New Properties</h2>
 
-        <div className="grid md:grid-cols-3  md:m-6 md:px-8 p-4 gap-x-10 gap-y-12 place-items-center">
+        <div className="grid md:grid-cols-3 m-8  md:m-6 md:px-8 p-4 gap-x-10 gap-y-12 place-items-center">
           {properties.map((item, id) => (
             <div
               key={id}
