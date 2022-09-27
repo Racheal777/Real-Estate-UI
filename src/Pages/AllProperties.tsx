@@ -40,7 +40,7 @@ export default function AllProperties({ posts }: PropertyProps) {
       <header>
         <div className="justify-center m-auto pt-20">
           <h2 className="text-white flex justify-center text-center md:text-6xl p-2 m-8 font-sans font-bold">
-            FIND YOUR BEST PROPERTY
+            BROWSE OUR BEST PROPERTY
           </h2>
           <p className="text-white justify-center text-center px-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
@@ -172,8 +172,7 @@ export default function AllProperties({ posts }: PropertyProps) {
                       <h4 className="text-slate-500">
                         Located at : {item.location}
                       </h4>
-                      <p className="text-slate-500">{item.description}</p>
-
+                      
                       <div className="flex justify-evenly py-2 text-white">
                         {item.amenities.map((tools) => (
                           <p className="bg-orange-600 p-1">{tools}</p>

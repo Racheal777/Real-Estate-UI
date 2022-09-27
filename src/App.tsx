@@ -47,7 +47,7 @@ function App() {
     axios
     .get<PropertyAttribute[]>("http://localhost:7070/api/property/all-properties")
       .then(response => {
-        setPosts(response.data);
+        setPosts(response.data.reverse());
         
         console.log(response.data)
       }).catch((error) => console.log(error));
