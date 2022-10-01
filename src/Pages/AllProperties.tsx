@@ -11,6 +11,7 @@ import { Pagination } from "flowbite-react";
 import { Data } from "../data";
 import { PropertyAttribute } from "../Components/PropertyForm";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 interface IPost {
   id: number;
@@ -24,14 +25,63 @@ type PropertyProps = {
 };
 
 //const properties: PropertyAttribute[] = [];
+const properties: PropertyAttribute[] = [];
+export default function AllProperties() {
+  const [name, setName] = useState("");
+  const [rent, setRent] = useState("");
+  const [location, setLocation] = useState("");
+  const [posts, setPosts]: [
+    PropertyAttribute[],
+    (posts: PropertyAttribute[]) => void
+  ] = React.useState(properties);
 
-export default function AllProperties({ posts }: PropertyProps) {
   let houses = posts;
   const pic = houses.map((imgg) => imgg.images[0]);
+  //image url
   const url = "http://localhost:7070/images/";
 
   const { ids } = useParams();
+  //display all properties
+  React.useEffect(() => {
+    axios
+      .get<PropertyAttribute[]>(
+        "http://localhost:7070/api/property/all-properties"
+      )
+      .then((response) => {
+        setPosts(response.data.reverse());
 
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  //FUNCTION TO SUBMIT THE SEARCH FORM
+  const submitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+    SearchProperties();
+
+    console.log(name, location, rent);
+  };
+  //SEARCH PROPERTY
+  const SearchProperties = async () => {
+    let properties = await axios
+      .get<PropertyAttribute[]>(
+        `http://localhost:7070/api/property/search/${location}/${name}/${rent}`
+      )
+      .then((response) => {
+        if (response) {
+          setPosts(response.data);
+          console.log(houses);
+        } else {
+          houses = posts;
+        }
+
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  console.log("nee", houses);
   return (
     <div>
       <Navbarx />
@@ -54,40 +104,63 @@ export default function AllProperties({ posts }: PropertyProps) {
           <h2>All Listings</h2>
         </div>
 
-        <div className="grid grid-rows-5   grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-2 p-2">
+        <div className="grid    grid-cols-1 md:grid-cols-3 gap-4 justify-center md:m-2 p-2">
           <div className=" md:mx-2 pt-2 mx-1  row-span-5">
-            <form action="" className="md:p-2 p-4 m-auto bg-slate-900 ">
+            <form
+              action=""
+              onSubmit={submitForm}
+              className="md:p-2 p-4 m-auto bg-slate-900 "
+            >
               <h3 className="text-white">Filter Here</h3>
               <div className="m-2 pb-2">
                 <input
                   type="text"
                   name=""
                   id=""
+                  value={location}
                   placeholder="search"
                   className=""
+                  onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
 
               <div className="m-2">
-                <select name="beds" id="" placeholder="select" className="p-2">
-                  <option value="1">1 bedroom</option>
-                  <option value="2">2 bedroom</option>
-                  <option value="3">3 bedroom</option>
+                <select
+                  name="beds"
+                  value={name}
+                  id=""
+                  placeholder="select"
+                  className="p-2"
+                  onChange={(e) => setName(e.target.value)}
+                >
+                  <option value="1">Select</option>
+                  <option value="single room">Single room</option>
+                  <option value="1 bedroom">1 bedroom</option>
+                  <option value="2 bedroom">2 bedroom</option>
+                  <option value="Chamber and Hall">Chamber and Hall</option>
                 </select>
               </div>
 
               <div className="pt-2 m-2 ">
-                <select name="price" id="" placeholder="select" className="">
-                  <option value="200">200ghc</option>
-                  <option value="300">300ghc</option>
+                <select
+                  name="price"
+                  value={rent}
+                  id=""
+                  placeholder="select"
+                  className=""
+                  onChange={(e) => setRent(e.target.value)}
+                >
+                  <option value="1">select</option>
                   <option value="400">400ghc</option>
+                  <option value="600">600ghc</option>
+                  <option value="800">800ghc</option>
+                  <option value="900">900ghc</option>
+                  <option value="1000">1000ghc</option>
                 </select>
               </div>
               <div className="text-center">
-                <button className="rounded-full bg-orange-600  mt-6 px-4 py-2 text-center">
-                  <a href="/property" className="text-white no-underline">
-                    Search
-                  </a>
+                <button className="rounded-full bg-orange-600  mt-6 px-4 py-2 text-center text-white">
+                  Search
                 </button>
               </div>
             </form>
@@ -172,7 +245,7 @@ export default function AllProperties({ posts }: PropertyProps) {
                       <h4 className="text-slate-500">
                         Located at : {item.location}
                       </h4>
-                      
+
                       <div className="flex justify-evenly py-2 text-white">
                         {item.amenities.map((tools) => (
                           <p className="bg-orange-600 p-1">{tools}</p>
